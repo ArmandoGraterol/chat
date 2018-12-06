@@ -1,32 +1,79 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+body {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 30%;
+  height: 100%;
+  border-right: 5px solid #333;
+}
+
+.messages-area {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.message-list {
+  height: 90%;
+  border-bottom: 5px solid #333;
+}
+
+.new-message {
+  height: 10%;
+}
+
+.new-message form {
+  display: flex;
+  height: 100%;
+}
+
+.new-message input {
+  font-family: 'Press Start 2P', cursive;
+  width: 85%;
+  height: 100%;
+  font-size: 30px;
+  padding-left: 20px;
+  border: solid #333;
+  border-width: 0 5px 0 0;
+  outline: none;
+}
+
+.new-message button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  width: 15%;
+  height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  outline: none;
+  transition: background-color 0.3s ease,
+              color 0.3s ease;
+}
+
+.new-message button:hover {
+  background-color: #327CCB;
   color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar li {
+  list-style: none;
+  font-size: 25px;
 }
